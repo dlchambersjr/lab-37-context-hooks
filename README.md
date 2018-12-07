@@ -1,10 +1,9 @@
-## Full-Stack-Project(react)
+## Warm-up - Context and Hooks
 
 ### Author: David Chambers
 
 ### Links and Resources
 * [REPO](https://github.com/dlchambersjr/lab-37-context-hooks)
-
 
 ### Modules
 #### `index.js`
@@ -14,42 +13,32 @@ entry point to the app.
 
 #### `app.js` -> central hub for the app
 ##### Exported Values and Methods
-Exports the results of the render() in the app class
+Renders `<Content/>` and `<Clicker/>`
 
-###### `componentDidMount() -> JSON data`
-Goes to a serve and retrieves content to passed into the Page component.
-
-###### `render(array) -> jsx output`
-creates out put that contains Header, Page, and Footer Components.
-
-#### `.js` -> central hub for the app
+#### `settings/context.js` -> GenericProvider class
 ##### Exported Values and Methods
-Exports the results of the render() in the app class
+Exports state in a context available to other components.
 
-###### `componentDidMount() -> JSON data`
-Goes to a serve and retrieves content to passed into the Page component.
+###### `class GenericProvider -> state`
+Establishes the starting state of the application
 
-###### `render(array) -> jsx output`
-creates out put that contains Header, Page, and Footer Components.
+###### `changeNumberTo()` -> random number`
+Updates state.number to a randomly generated number.
 
-### Components
-#### `header.js` -> exports props.children
+###### `changeColorTo()` -> random hex color`
+Updates state.color to a randomly generated hex color.
 
-#### `page.js` -> content from <Deck>
+#### `content.js` -> renders content
 ##### Exported Values and Methods
-The exported value from Deck is provided via props from Page and the content data passed down from App
+Exports JSX to be rendered by `<App/>` in the DOM. It also allows for state to be consumed in the JSX.
 
-#### `deck.js` -> content from <Child>
-The exported value from Card is provided via props from Deck and the content data passed down from Page
-
-#### `card.js` -> content received from <Deck>
-Renders the props that have been based in from Deck
-
-#### `footer.js` -> exports props.children
+#### `button.js` -> a button
+##### Exported Values and Methods
+Exports JSX to be rendered by `<App/>` in the DOM. It also allows for state to be consumed in the JSX.
 
 ### Running the app
 * `npm start`
 * or visit the [DEPLOYED version](http://dc-week7-fullstack-project.s3-website-us-west-2.amazonaws.com/)
 
 #### UML
-* [Context and Hooks UML](https://raw.githubusercontent.com/dlchambersjr/full-stack-project-server/master/uml-react.jpg)
+* [Context and Hooks UML](https://raw.githubusercontent.com/dlchambersjr/lab-37-context-hooks/master/lab37-context-uml.jpg)
